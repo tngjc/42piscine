@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jtaing <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/07/04 14:55:28 by jtaing            #+#    #+#             */
-/*   Updated: 2023/07/06 12:14:25 by jtaing           ###   ########.fr       */
+/*   Created: 2023/07/06 06:43:22 by jtaing            #+#    #+#             */
+/*   Updated: 2023/07/06 11:42:02 by jtaing           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-char	*ft_strncat(char *dest, char *src, unsigned int nb)
+int	ft_atoi(char *str)
 {
-	int				i;
-	unsigned int	j;
+	int	nb;
+	int	s;
 
-	i = 0;
-	while (dest[i])
-		i++;
-	j = 0;
-	while (src[j] && j < nb)
+	nb = 0;
+	s = 0;
+	while ((*str >= 9 && *str <= 13) || *str == 32)
+		str++;
+	while (*str == 43 || *str == 45)
 	{
-		dest[i + j] = src[j];
-		j++;
+		if (*str == 45i)
+			s++;
+		str++;
 	}
-	dest[i + j] = '\0';
-	return (dest);
+	while (*str >= 48 && *str <= 57)
+	{
+		nb *= 10;
+		nb += *str - 48;
+		str++;
+	}
+	if (s % 2 == 0)
+		return (nb);
+	return (-nb);
 }
