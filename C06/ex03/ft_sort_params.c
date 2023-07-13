@@ -6,10 +6,11 @@
 /*   By: jtaing <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 12:47:02 by jtaing            #+#    #+#             */
-/*   Updated: 2023/07/11 13:44:47 by jtaing           ###   ########.fr       */
+/*   Updated: 2023/07/12 13:40:50 by jtaing           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include <unistd.h>
+
 int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
@@ -66,7 +67,7 @@ int	main(int ac, char **av)
 		j++;
 	}
 	i = 1;
-	while (i <ac)
+	while (i < ac)
 	{
 		ft_putstr(av[i]);
 		ft_putchar('\n');
@@ -74,4 +75,3 @@ int	main(int ac, char **av)
 	}
 	return (0);
 }
-

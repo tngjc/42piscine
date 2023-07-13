@@ -6,7 +6,7 @@
 /*   By: jtaing <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:10:07 by jtaing            #+#    #+#             */
-/*   Updated: 2023/07/11 11:47:15 by jtaing           ###   ########.fr       */
+/*   Updated: 2023/07/12 07:55:40 by jtaing           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_sqrt(int nb)
 	i = 2;
 	if (nb >= 2)
 	{
-		while (nb >= i * i)
+		while (i < 46341)
 		{
 			if (nb == i * i)
 			{
@@ -38,6 +38,7 @@ int	ft_sqrt(int nb)
 
 int	main(void)
 {
-	printf("%d", ft_sqrt(10000));
+	printf("%d", ft_sqrt(100000000));
+
 
 }
