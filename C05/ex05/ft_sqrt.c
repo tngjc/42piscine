@@ -6,19 +6,17 @@
 /*   By: jtaing <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:10:07 by jtaing            #+#    #+#             */
-/*   Updated: 2023/07/12 07:55:40 by jtaing           ###   ########.fr       */
+/*   Updated: 2023/07/17 12:48:36 by jtaing           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_sqrt(int nb)
 {
+	int	i;
+
 	if (nb <= 0)
 		return (0);
 	if (nb == 1)
 		return (1);
-	
-	int	i;
-
 	i = 2;
 	if (nb >= 2)
 	{
@@ -32,13 +30,4 @@ int	ft_sqrt(int nb)
 		}
 	}
 	return (0);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d", ft_sqrt(100000000));
-
-
 }

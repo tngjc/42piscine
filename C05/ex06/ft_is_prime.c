@@ -6,29 +6,23 @@
 /*   By: jtaing <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/12 07:59:25 by jtaing            #+#    #+#             */
-/*   Updated: 2023/07/13 10:09:56 by jtaing           ###   ########.fr       */
+/*   Updated: 2023/07/19 10:51:25 by jtaing           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_is_prime(int nb)
 {
-	if (nb <= 1 || nb % 2 == 0)
-		return (0);
 	int	i;
-	
-	i = 2;
+
+	i = 3;
+	if (nb == 2)
+		return (1);
+	if (nb < 0 || nb == 0 || nb == 1 || nb % 2 == 0)
+		return (0);
 	while (i <= nb / i)
-	{		
-		if (!(nb % i))
+	{
+		if (nb % i == 0)
 			return (0);
 		i++;
 	}
 	return (1);
-}
-
-#include <stdio.h>
-
-int	main(void)
-{
-	printf("%d", ft_is_prime(2102000009));
 }
